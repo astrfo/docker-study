@@ -57,7 +57,8 @@ docker rmi [imageID]
 
 ### コンテナに再度入る
 
-コンテナからデタッチする方法は`ctrl+p+q`で下記はアタッチする方法（抜けるだけなら`ctrl+d`のみ）
+コンテナを起動したまま抜ける方法は`ctrl+p+q`で下記はアタッチする方法  
+`ctrl+d`をするとSTATUSがExitedになり，コンテナが終了する
 
 ```bash
 docker attach [コンテナID]
