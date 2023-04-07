@@ -58,7 +58,8 @@ docker rmi [imageID]
 ### コンテナに再度入る
 
 コンテナを起動したまま抜ける方法は`ctrl+p+q`で下記はアタッチする方法  
-`ctrl+d`をするとSTATUSがExitedになり，コンテナが終了する
+`ctrl+d`をするとSTATUSがExitedになり，コンテナが終了する  
+VSCodeのデフォルトで設定されている`ctrl+q`のQuick Open Viewのショートカットを削除することで可能
 
 ```bash
 docker attach [コンテナID]
@@ -156,3 +157,4 @@ CMD ["/bin/bash"]   #bashを起動する
 - [dockerのコンテナとイメージの違い](https://hacknote.jp/archives/56650/)
 - [Dockerコマンド よく使うやつ](https://qiita.com/Esfahan/items/52141a2ad741933d7d4c)
 - [Docker run や exec コマンドにつける /bin/bashや/sbin/initについて](https://teratail.com/questions/58523)
+- [Dockerのコンテナから抜ける in VSCode](https://qiita.com/Statham/items/c204e85067ea4dca2724)
