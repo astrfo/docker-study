@@ -59,11 +59,15 @@ docker rmi [imageID]
 
 コンテナを起動したまま抜ける方法は`ctrl+p+q`で下記はアタッチする方法  
 `ctrl+d`をするとSTATUSがExitedになり，コンテナが終了する  
-VSCodeのデフォルトで設定されている`ctrl+q`のQuick Open Viewのショートカットを削除することで可能
+VSCodeのデフォルトで設定されている`ctrl+q`のQuick Open Viewのショートカットを削除することで可能  
 
 ```bash
 docker attach [コンテナID]
 ```
+
+#### **追記2023/04/12**  
+`docker attach [コンテナID]`を実行したところ`You cannot attach to a stopped container, start it first`と表示．  
+`docker start [コンテナID]`を実行した後に`docker attach [コンテナID]`を実行すればコンテナに入れた．
 
 ### コンテナのログ確認
 
