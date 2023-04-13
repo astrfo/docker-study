@@ -30,6 +30,31 @@ Dev Containerの名前．どの名前で作業しているか明確にする．
 "dockerFile": "Dockerfile"
 ```
 
+### build
+
+Dockerfileを指定してイメージをビルドする．  
+イメージのビルドとDev Containerの作成が同時に行える．
+
+```json
+"build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+        "VARIANT": "python3.7",
+        "HTTP_PROXY": "http://proxy:8080"
+    }
+}
+```
+
+#### context
+
+イメージをビルドするためのコンテキストのパスを相対パスで指定．  
+Dev Containerのルートフォルダと同じフォルダにDockerfileがあれば省略可能．
+
+#### args
+
+Dockerfileの`ARG`として定義．
+
 ### extensions
 
 インストールする拡張機能のリストを指定．コンテナ内で使用される拡張機能を事前に指定することができる．
@@ -80,4 +105,20 @@ VSCodeの設定を決められる．例えばシェルの指定など．
     "NODE_ENV": "production",
     "PORT": "8080"
 }
+```
+
+### postCreateCommand
+
+Dev Containerが作成された後に実行するコマンドを指定．
+
+```json
+"postCreateCommand": "pip install -r requirements.txt"
+```
+
+### postStartCommand
+
+Dev Container が起動した後に実行するコマンドを指定．
+
+```json
+"postStartCommand": "echo 'Dev Container started.'"
 ```
