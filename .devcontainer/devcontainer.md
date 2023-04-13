@@ -11,6 +11,8 @@
 ## devcontainer.json
 
 - devcontainerフォルダにdevcontainer.jsonは必須
+- 最低でも"name"と"dockerFile"が必要
+  - 一般的に"extensions"や"mounts"，"containerEnv"は必要らしい
 
 ## devcontainer.jsonの項目
 
