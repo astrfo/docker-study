@@ -1,0 +1,13 @@
+{
+    "name": "docker-study",
+    "dockerFile": "Dockerfile",
+    "extensions": [
+        "ms-python.python"
+    ],
+    "mounts": [
+        "source=.,target=/workspace,type=bind,consistency=cached"
+    ],
+    "containerEnv": {
+        "PYTHONPATH": "/home/astrfo"
+    }
+}
