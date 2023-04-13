@@ -1,13 +1,17 @@
 {
     "name": "docker-study",
     "dockerFile": "Dockerfile",
-    "extensions": [
-        "ms-python.python"
-    ],
-    "mounts": [
-        "source=.,target=/workspace,type=bind,consistency=cached"
-    ],
-    "containerEnv": {
-        "PYTHONPATH": "/home/astrfo"
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ],
+            "mounts": [
+                "source=.,target=/workspace,type=bind,consistency=cached"
+            ],
+            "env": {
+                "PYTHONPATH": "/home/astrfo"
+            }
+        }
     }
 }
